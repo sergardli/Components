@@ -1,3 +1,5 @@
+import 'package:components/src/pages/alert_page.dart';
+import 'package:components/src/pages/avatar_page.dart';
 import 'package:flutter/material.dart';
 
 import 'package:components/src/providers/menu_provider.dart';
@@ -16,7 +18,9 @@ class HomePage extends StatelessWidget {
     );
   }
 
-
+  /**
+   * 
+   */
   Widget _lista() {
 
     return FutureBuilder(
@@ -33,6 +37,9 @@ class HomePage extends StatelessWidget {
   }
 
 
+  /**
+   * 
+   */
   List<Widget> _listaItems( List<dynamic> data, BuildContext context ) {
 
     final List<Widget> opciones = [];
@@ -44,9 +51,10 @@ class HomePage extends StatelessWidget {
         title: Text( opt['texto'] ),
         leading:  getIcon( opt['icon'] ) ,
         trailing: Icon ( Icons.keyboard_arrow_right, color: Colors.blue ),
+        
         onTap: () {
 
-          Navigator.pushNamed(context, opt['ruta'] );
+          Navigator.pushNamed(context, opt['ruta'] );   
         },
       );
 

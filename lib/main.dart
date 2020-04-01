@@ -1,5 +1,10 @@
-import 'package:components/src/pages/home_page.dart';
 import 'package:flutter/material.dart';
+
+import 'package:components/src/pages/alert_page.dart';
+
+import 'package:components/src/routes/routes.dart';
+
+
 
 void main() => runApp(MyApp());
 
@@ -11,7 +16,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       
-      home: HomePage(),
+      // home: HomePage(),
+      initialRoute: '/',
+      routes: getAppRoutes(),
+
+      onGenerateRoute: ( RouteSettings settings ) {
+        return MaterialPageRoute(
+          builder: ( BuildContext context ) => AlertPage(),
+        );
+      }
     );
   }
 }
