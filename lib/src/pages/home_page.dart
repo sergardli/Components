@@ -46,7 +46,6 @@ class HomePage extends StatelessWidget {
 
 
     data.forEach( (opt) {
-
       final widgetTemp = ListTile(
         title: Text( opt['texto'] ),
         leading:  getIcon( opt['icon'] ) ,
